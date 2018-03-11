@@ -24,8 +24,6 @@ public class SecondActivity extends AppCompatActivity {
     EditText    editTexteightanswer;
     CheckBox    checkBoxGroupninethanswer1,
                 checkBoxGroupninethanswer2;
-
-
 // Setting the score to zero;
     int score = 0;
     @Override
@@ -48,9 +46,7 @@ public class SecondActivity extends AppCompatActivity {
         bundle = getIntent().getExtras();
         // Extract value
         name = bundle.getString("name");
-
     }
-
     public void Submit(View V) {
 
 
@@ -93,7 +89,6 @@ public class SecondActivity extends AppCompatActivity {
         }
         score=0;
     }
-
     //Get back to first screen, when the Reset button is pressed
     public void restartButton(View v){
         score = 0;
