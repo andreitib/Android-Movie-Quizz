@@ -83,7 +83,7 @@ public class SecondActivity extends AppCompatActivity {
         if (score == 9) {
             Toast.makeText(this, "Perfect " + name + " ! Your score is " + score + " points out of 9!", Toast.LENGTH_LONG).show();
         }else if(score == 0){
-            Toast.makeText(this, "I'm sorry " + name + "! No answers out of 9 is correct!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "I'm sorry " + name + "! No answers out of 9 where correct!", Toast.LENGTH_LONG).show();
         }else {
             Toast.makeText(this, "Well done " + name + " ! Your score is " + score + " point(s) out of 9!", Toast.LENGTH_LONG).show();
         }
