@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/movietimewallpaper"
+    android:gravity="center"
+    android:fillViewport="true">
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/please_enter_your_name"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"
+        android:layout_above="@id/entertext"
+        android:paddingBottom="30dp"
+        />
+    <EditText
+        android:id="@+id/entertext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:hint="@string/name"
+        android:textSize="30sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@id/btnPlay"
+        android:paddingBottom="40dp"
+        android:inputType="textMultiLine" />
+    <Button
+        android:id="@+id/btnPlay"
+        android:text="@string/play"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:background="@drawable/playbutton"
+        android:shadowColor="@color/shadow"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        />
+</LinearLayout>
+
