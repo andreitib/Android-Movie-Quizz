@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 
 public class SecondActivity extends AppCompatActivity {
-    Bundle bundle;
-    String name;
+     Bundle bundle;
+    private String name;
     RadioButton radioButtonfirstanswer,
                 radioButtonsecondanswer,
                 radioButtonthirdanswer,
@@ -22,8 +22,11 @@ public class SecondActivity extends AppCompatActivity {
                 radioButtonsixthanswer,
                 radioButtonseventhanswer;
     EditText    editTexteightanswer;
-    CheckBox    checkBoxGroupninethanswer1,
-                checkBoxGroupninethanswer2;
+    CheckBox    checkBoxninethanswer1,
+                checkBoxninethanswer2,
+                checkBoxninethanswer3,
+                checkBoxninethanswer4;
+
 // Setting the score to zero;
     int score = 0;
     @Override
@@ -38,17 +41,19 @@ public class SecondActivity extends AppCompatActivity {
         radioButtonfifthanswer =  findViewById(R.id.question5A_rb);
         radioButtonsixthanswer =  findViewById(R.id.question6B_rb);
         radioButtonseventhanswer =  findViewById(R.id.question7A_rb);
-        editTexteightanswer =  findViewById(R.id.question8_et);
-        checkBoxGroupninethanswer1 =  findViewById(R.id.question9A_cb);
-        checkBoxGroupninethanswer2 =  findViewById(R.id.question9C_cb);
+        checkBoxninethanswer1 =  findViewById(R.id.question9A_cb);
+        checkBoxninethanswer2 = findViewById(R.id.question9B_cb);
+        checkBoxninethanswer3 =  findViewById(R.id.question9C_cb);
+        checkBoxninethanswer4 =  findViewById(R.id.question9D_cb);
 
+        editTexteightanswer =  findViewById(R.id.question8_et);
         // Get Bundle
         bundle = getIntent().getExtras();
         // Extract value
         name = bundle.getString("name");
     }
-    public void Submit(View V) {
 
+    public void Submit(View V) {
 
         if (radioButtonfirstanswer.isChecked()) {
             score =score+1;
@@ -71,25 +76,28 @@ public class SecondActivity extends AppCompatActivity {
         if (radioButtonseventhanswer.isChecked()) {
             score =score+1;
         }
+        boolean checkboxx1=checkBoxninethanswer1.isChecked();
+        boolean checkboxx2=checkBoxninethanswer2.isChecked();
+        boolean checkboxx3=checkBoxninethanswer3.isChecked();
+        boolean checkboxx4=checkBoxninethanswer4.isChecked();
+        if(checkboxx1 && !checkboxx2  && checkboxx3  && !checkboxx4){
+            score = score +1;
+        }
         String answerq4 = editTexteightanswer.getText().toString();
         if (answerq4.equals("Twilight")||answerq4.equals("twilight")||answerq4.equals("TWILIGHT")) {
             score =score+1;}
-
-        if ((checkBoxGroupninethanswer1.isChecked()) && (checkBoxGroupninethanswer2.isChecked())) {
-            score =score+1;;
-        }
 
 
         if (score == 9) {
             Toast.makeText(this, "Perfect " + name + " ! Your score is " + score + " points out of 9!", Toast.LENGTH_LONG).show();
         }else if(score == 0){
-            Toast.makeText(this, "I'm sorry " + name + "! No answers out of 9 where correct!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "I'm sorry " + name + "! No answers out of 9 is correct!", Toast.LENGTH_LONG).show();
         }else {
             Toast.makeText(this, "Well done " + name + " ! Your score is " + score + " point(s) out of 9!", Toast.LENGTH_LONG).show();
         }
         score=0;
     }
-    //Get back to first screen, when the Reset button is pressed
+    //Get back to first screen, when the Restart button is pressed
     public void restartButton(View v){
         score = 0;
         Intent intent = new Intent(this, MainActivity.class);
