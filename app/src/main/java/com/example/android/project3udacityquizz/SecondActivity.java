@@ -41,12 +41,12 @@ public class SecondActivity extends AppCompatActivity {
         radioButtonfifthanswer =  findViewById(R.id.question5A_rb);
         radioButtonsixthanswer =  findViewById(R.id.question6B_rb);
         radioButtonseventhanswer =  findViewById(R.id.question7A_rb);
+        editTexteightanswer =  findViewById(R.id.question8_et);
         checkBoxninethanswer1 =  findViewById(R.id.question9A_cb);
         checkBoxninethanswer2 = findViewById(R.id.question9B_cb);
         checkBoxninethanswer3 =  findViewById(R.id.question9C_cb);
         checkBoxninethanswer4 =  findViewById(R.id.question9D_cb);
 
-        editTexteightanswer =  findViewById(R.id.question8_et);
         // Get Bundle
         bundle = getIntent().getExtras();
         // Extract value
