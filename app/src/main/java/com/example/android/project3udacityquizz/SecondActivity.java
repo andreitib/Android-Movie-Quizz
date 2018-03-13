@@ -10,10 +10,15 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.android.project3udacityquizz.MainActivity;
+import com.example.android.project3udacityquizz.R;
+
 
 public class SecondActivity extends AppCompatActivity {
      Bundle bundle;
     private String name;
+    //@BindView(R.id.question1A_rb) RadioButton radioButtonfirstanswer;
+
     RadioButton radioButtonfirstanswer,
                 radioButtonsecondanswer,
                 radioButtonthirdanswer,
@@ -33,7 +38,6 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-
         radioButtonfirstanswer =  findViewById(R.id.question1A_rb);
         radioButtonsecondanswer =  findViewById(R.id.question2B_rb);
         radioButtonthirdanswer =  findViewById(R.id.question3A_rb);
@@ -91,7 +95,7 @@ public class SecondActivity extends AppCompatActivity {
         if (score == 9) {
             Toast.makeText(this, "Perfect " + name + " ! Your score is " + score + " points out of 9!", Toast.LENGTH_LONG).show();
         }else if(score == 0){
-            Toast.makeText(this, "I'm sorry " + name + "! No answers out of 9 is correct!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "I'm sorry " + name + "! No answers out of 9 are correct!", Toast.LENGTH_LONG).show();
         }else {
             Toast.makeText(this, "Well done " + name + " ! Your score is " + score + " point(s) out of 9!", Toast.LENGTH_LONG).show();
         }
