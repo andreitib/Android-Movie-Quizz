@@ -17,9 +17,9 @@ import com.example.android.project3udacityquizz.R;
 public class SecondActivity extends AppCompatActivity {
      Bundle bundle;
     private String name;
-    //@BindView(R.id.question1A_rb) RadioButton radioButtonfirstanswer;
+    @BindView(R.id.question1A_rb) RadioButton radioButtonfirstanswer;
 
-    RadioButton radioButtonfirstanswer,
+    RadioButton
                 radioButtonsecondanswer,
                 radioButtonthirdanswer,
                 radioButtonfourthanswer,
@@ -38,7 +38,7 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        radioButtonfirstanswer =  findViewById(R.id.question1A_rb);
+        //radioButtonfirstanswer =  findViewById(R.id.question1A_rb);
         radioButtonsecondanswer =  findViewById(R.id.question2B_rb);
         radioButtonthirdanswer =  findViewById(R.id.question3A_rb);
         radioButtonfourthanswer =  findViewById(R.id.question4B_rb);
